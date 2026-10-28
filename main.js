@@ -1,16 +1,8 @@
 (() => {
-  const track = document.querySelector('.strip-track');
-  if (track && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    [...track.children].forEach((img) => {
-      const c = img.cloneNode(true);
-      c.setAttribute('aria-hidden', 'true');
-      track.appendChild(c);
-    });
-  }
-
   const box = document.querySelector('.lightbox');
+  if (!box) return;
   const big = box.querySelector('img');
-  document.querySelectorAll('[data-zoom] img').forEach((img) => {
+  document.querySelectorAll('img[data-zoom]').forEach((img) => {
     img.tabIndex = 0;
     const open = () => {
       big.src = img.currentSrc || img.src;
