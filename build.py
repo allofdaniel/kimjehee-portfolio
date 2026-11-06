@@ -89,7 +89,7 @@ ROUTINE = {
 
 ONGO = {
     "slug": "ongo", "year": "2026", "cover": "covers/ongo.webp", "group": "ongo",
-    "ko": {"kind": "개인 브랜드 · 진행 중", "title": "온고 溫故", "sub": "한국 민화를 담은 아기담요",
+    "ko": {"kind": "브랜드 · 진행 중", "title": "온고 溫故", "sub": "한국 민화를 담은 아기담요",
            "summary": "그림으로 소원을 비는 일을, 지금의 방식으로",
            "meta": [("형태", "직접 운영하는 브랜드"), ("역할", "대표 · 브랜드 기획, 디자인"), ("채널", "@ongo.won_archive"), ("시기", "2026 –")],
            "body": ["온고(溫故)는 모란, 달항아리 같은 한국 민화를 아기담요에 담는 브랜드입니다. 그림에 담긴 뜻을 적은 이야기 카드를 함께 넣어, 아기의 첫 담요가 옛 그림으로 소원을 비는 일이 되도록 준비하고 있습니다.",
@@ -98,7 +98,7 @@ ONGO = {
            "flow": ["브랜드 정의", "띠 컬렉션 시안", "선물 구매 설문", "제품 제작"],
            "alts": ["2026 병오년 · 붉은 해와 푸른 산 사이에 엎드린 아기 말", "2027 정미년 · 달항아리 곁의 순한 아기 양", "말과 양 · 달항아리와 모란 곁에 나란히 앉은 두 아기"],
            "link": ("온고 브랜드 페이지", "https://ongowon.vercel.app")},
-    "en": {"kind": "Own brand · in progress", "title": "Ongo 溫故", "sub": "Baby blankets with Korean folk painting",
+    "en": {"kind": "Brand · in progress", "title": "Ongo 溫故", "sub": "Baby blankets with Korean folk painting",
            "summary": "Wishing through pictures, the way we live now",
            "meta": [("Type", "My own brand"), ("Role", "Founder · brand planning, design"), ("Channel", "@ongo.won_archive"), ("Year", "2026 –")],
            "body": ["Ongo (溫故) puts Korean folk painting, such as peonies and moon jars, on baby blankets. Each comes with a story card explaining what the painting wishes for, so a baby's first blanket carries an old way of making a wish.",
