@@ -47,9 +47,14 @@
       <a class="text-link" href="/en/about">How I work and career</a>
     </div>
   </section>
-  <section class="index index-ongo" id="ongo" aria-labelledby="idx-ongo">
-    <h2 id="idx-ongo" class="label"><span class="g-no">1</span>Ongo brand</h2>
-    <ul class="rows">
+  <section class="index" aria-label="Work">
+    <div class="switch" role="tablist" aria-label="Work">
+      <button type="button" role="tab" id="tab-ongo" aria-controls="ongo" aria-selected="true"><span class="g-no">1</span>Ongo brand<span class="g-count">1</span></button>
+      <button type="button" role="tab" id="tab-work" aria-controls="work" aria-selected="false"><span class="g-no">2</span>Service & marketing design<span class="g-count">8</span></button>
+    </div>
+    <div class="panel" id="ongo" role="tabpanel" aria-labelledby="tab-ongo">
+      <h2 class="label panel-label">Ongo brand</h2>
+      <ul class="rows">
     <li>
       <a class="row" href="/en/work/ongo">
         <span class="row-kind">Own brand · in progress</span>
@@ -58,11 +63,11 @@
         <span class="row-img"><img src="/assets/covers/ongo.webp" alt="" width="1800" height="900" loading="lazy" style="view-transition-name:cover-ongo"></span>
       </a>
     </li>
-    </ul>
-  </section>
-  <section class="index" id="work" aria-labelledby="idx">
-    <h2 id="idx" class="label"><span class="g-no">2</span>Service & marketing design</h2>
-    <ul class="rows">
+      </ul>
+    </div>
+    <div class="panel" id="work" role="tabpanel" aria-labelledby="tab-work">
+      <h2 class="label panel-label">Service & marketing design</h2>
+      <ul class="rows">
     <li>
       <a class="row" href="/en/work/insurance-ux">
         <span class="row-kind">Financial UX research</span>
@@ -127,7 +132,8 @@
         <span class="row-img"><img src="/assets/covers/fashion-brand.webp" alt="" width="1800" height="900" loading="lazy" style="view-transition-name:cover-fashion-brand"></span>
       </a>
     </li>
-    </ul>
+      </ul>
+    </div>
   </section>
 </main>
 <footer class="foot">
