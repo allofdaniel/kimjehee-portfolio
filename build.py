@@ -87,21 +87,46 @@ ROUTINE = {
     "gallery": [("wide", "routine/01.webp", 2000, 1125), ("half", "routine/02.webp", 2000, 1125), ("half", "routine/03.webp", 2000, 1125)],
 }
 
+ONGO = {
+    "slug": "ongo", "year": "2026", "cover": "covers/ongo.webp", "group": "ongo",
+    "ko": {"kind": "개인 브랜드 · 진행 중", "title": "온고 溫故", "sub": "한국 민화를 담은 아기담요",
+           "summary": "그림으로 소원을 비는 일을, 지금의 방식으로",
+           "meta": [("형태", "직접 운영하는 브랜드"), ("역할", "대표 · 브랜드 기획, 디자인"), ("채널", "@ongo.won_archive"), ("시기", "2026 –")],
+           "body": ["온고(溫故)는 모란, 달항아리 같은 한국 민화를 아기담요에 담는 브랜드입니다. 그림에 담긴 뜻을 적은 이야기 카드를 함께 넣어, 아기의 첫 담요가 옛 그림으로 소원을 비는 일이 되도록 준비하고 있습니다.",
+                    "태어난 해의 띠를 첫 그림으로 담는 띠 컬렉션 시안을 만들었고, 제품을 만들기 전에 실제로 아기 선물을 어떻게 고르는지 듣는 2분 설문을 운영하고 있습니다.",
+                    "아래 이미지는 AI로 만든 시안이며 실제 제품과 다를 수 있습니다."],
+           "flow": ["브랜드 정의", "띠 컬렉션 시안", "선물 구매 설문", "제품 제작"],
+           "alts": ["2026 병오년 · 붉은 해와 푸른 산 사이에 엎드린 아기 말", "2027 정미년 · 달항아리 곁의 순한 아기 양", "말과 양 · 달항아리와 모란 곁에 나란히 앉은 두 아기"],
+           "link": ("온고 브랜드 페이지", "https://ongowon.vercel.app")},
+    "en": {"kind": "Own brand · in progress", "title": "Ongo 溫故", "sub": "Baby blankets with Korean folk painting",
+           "summary": "Wishing through pictures, the way we live now",
+           "meta": [("Type", "My own brand"), ("Role", "Founder · brand planning, design"), ("Channel", "@ongo.won_archive"), ("Year", "2026 –")],
+           "body": ["Ongo (溫故) puts Korean folk painting, such as peonies and moon jars, on baby blankets. Each comes with a story card explaining what the painting wishes for, so a baby's first blanket carries an old way of making a wish.",
+                    "I made draft designs for a zodiac collection that uses the baby's birth-year animal as its first picture, and I run a two-minute survey on how people actually choose baby gifts before production.",
+                    "The images below are AI-generated drafts and may differ from the final product."],
+           "flow": ["Define the brand", "Zodiac drafts", "Gift survey", "Production"],
+           "alts": ["2026, year of the horse · a baby horse between a red sun and blue hills", "2027, year of the sheep · a gentle lamb beside a moon jar", "Horse and sheep side by side by a moon jar and peonies"],
+           "link": ("Ongo brand page", "https://ongowon.vercel.app")},
+    "tti": ["ongo/01.webp", "ongo/02.webp", "ongo/03.webp"],
+}
+
 UI = {
     "ko": {"work": "작업", "about": "소개", "skip": "본문 바로가기", "all": "작업 전체", "next": "다음 작업",
-           "role": "서비스·사업 기획자", "theme": "화면 모드 전환", "other": "EN", "other_label": "English",
-           "lede": "고객의 문제를 사업 기회로 연결합니다. 금융, 헬스케어, 구독 커머스, 제조 현장에서 들은 목소리를 실행 가능한 개선안으로 만듭니다.",
+           "role": "서비스·마케팅 디자이너", "theme": "화면 모드 전환", "other": "EN", "other_label": "English",
+           "lede": "고객의 문제를 화면과 메시지로 풀어냅니다. 금융, 헬스케어, 구독 커머스, 제조 현장의 서비스를 설계해 왔고, 지금은 한국 민화 아기담요 브랜드 온고를 만들고 있습니다.",
            "more": "일하는 방식과 경력", "hint": "각 화면 안에서 스크롤해 전체 페이지를 볼 수 있습니다.",
            "close": "닫기", "zoom": "이미지 크게 보기", "process": "진행 흐름",
-           "site": "김제희 포트폴리오", "home_title": "김제희 · 서비스·사업 기획자",
-           "home_desc": "고객의 문제를 사업 기회로 연결해온 기획자 김제희의 포트폴리오입니다."},
+           "site": "김제희 포트폴리오", "home_title": "김제희 · 서비스·마케팅 디자이너",
+           "home_desc": "온고 브랜드를 운영하는 서비스·마케팅 디자이너 김제희의 포트폴리오입니다.",
+           "g_ongo": "온고 브랜드", "g_work": "서비스·마케팅 디자인", "nav_ongo": "온고"},
     "en": {"work": "Work", "about": "About", "skip": "Skip to content", "all": "All work", "next": "Next project",
-           "role": "Service & Business Planner", "theme": "Toggle color mode", "other": "한국어", "other_label": "한국어",
-           "lede": "I turn customer problems into business opportunities, taking what I hear in finance, healthcare, subscription commerce and manufacturing and shaping it into improvements teams can ship.",
+           "role": "Service & Marketing Designer", "theme": "Toggle color mode", "other": "한국어", "other_label": "한국어",
+           "lede": "I solve customer problems through screens and messages. I have designed services in finance, healthcare, subscription commerce and manufacturing, and I am now building Ongo, a baby blanket brand rooted in Korean folk painting.",
            "more": "How I work and career", "hint": "Scroll inside each screen to see the full page.",
            "close": "Close", "zoom": "Enlarged image", "process": "Process",
-           "site": "Jehee Kim Portfolio", "home_title": "Jehee Kim · Service & Business Planner",
-           "home_desc": "Portfolio of Jehee Kim, a planner who connects customer problems to business opportunities."},
+           "site": "Jehee Kim Portfolio", "home_title": "Jehee Kim · Service & Marketing Designer",
+           "home_desc": "Portfolio of Jehee Kim, a service and marketing designer building the Ongo brand.",
+           "g_ongo": "Ongo brand", "g_work": "Service & marketing design", "nav_ongo": "Ongo"},
 }
 NAME = {"ko": "김제희", "en": "Jehee Kim"}
 
@@ -172,11 +197,12 @@ PROJECTS = [FINANCE, COMMERCE,
     },
 ]
 PROJECTS[3:3] = [ESG, ROUTINE]
+PROJECTS.insert(0, ONGO)
 
 EMAIL = "kjh012677@gmail.com"
 ABOUT = {
     "ko": {
-        "title": "소개 | 김제희", "desc": "현장에서 듣고, 원인을 정의하고, 이해관계자를 정렬해 결과물로 만드는 기획자 김제희입니다.",
+        "title": "소개 | 김제희", "desc": "현장에서 듣고, 원인을 정의하고, 이해관계자를 정렬해 결과물로 만드는 서비스·마케팅 디자이너 김제희입니다.",
         "lead": "고객과 기술, 사업과 현장 사이에서 같은 방향을 만듭니다.",
         "stats": [("5+", "년 실무 경력"), ("8", "경험한 산업"), ("60+", "인터뷰한 사용자")],
         "process_h": "일하는 방식",
@@ -310,7 +336,8 @@ def header(lang, active, path, dark=False):
 <header class="top">
   <a class="mark" href="{pre(lang)}/">{NAME[lang]}</a>
   <nav aria-label="menu">
-    {a(pre(lang) + '/', u['work'], 'work')}
+    {a(pre(lang) + '/#ongo', u['nav_ongo'], 'ongo')}
+    {a(pre(lang) + '/#work', u['work'], 'work')}
     {a(pre(lang) + '/about', u['about'], 'about')}
     <span class="tools-nav">
       <a class="lang" href="{pre(other)}{path}" hreflang="{other}" lang="{other}">{u['other']}</a>
@@ -354,9 +381,10 @@ def flow(steps, label):
 # ---------------------------------------------------------------- pages
 def home(lang):
     u = UI[lang]
-    rows = []
+    groups = {"ongo": [], "work": []}
     for p in PROJECTS:
         c = p[lang]
+        rows = groups[p.get("group", "work")]
         rows.append(f"""    <li>
       <a class="row" href="{pre(lang)}/work/{p['slug']}">
         <span class="row-kind">{c['kind']}</span>
@@ -366,7 +394,7 @@ def home(lang):
       </a>
     </li>""")
     name = "".join(f"<span>{ch}</span>" for ch in (NAME[lang] if lang == "ko" else "Jehee Kim".split(" ")))
-    return (head(lang, u["home_title"], u["home_desc"], "/", "home") + header(lang, "work", "/") + f"""<main id="main">
+    return (head(lang, u["home_title"], u["home_desc"], "/", "home") + header(lang, "", "/") + f"""<main id="main">
   <section class="hero">
     <h1 class="name name-{lang}" aria-label="{NAME[lang]}">{name}</h1>
     <div class="hero-side">
@@ -375,10 +403,16 @@ def home(lang):
       <a class="text-link" href="{pre(lang)}/about">{u['more']}</a>
     </div>
   </section>
-  <section class="index" aria-labelledby="idx">
-    <h2 id="idx" class="label">{u['work']}</h2>
+  <section class="index index-ongo" id="ongo" aria-labelledby="idx-ongo">
+    <h2 id="idx-ongo" class="label"><span class="g-no">1</span>{u['g_ongo']}</h2>
     <ul class="rows">
-{chr(10).join(rows)}
+{chr(10).join(groups['ongo'])}
+    </ul>
+  </section>
+  <section class="index" id="work" aria-labelledby="idx">
+    <h2 id="idx" class="label"><span class="g-no">2</span>{u['g_work']}</h2>
+    <ul class="rows">
+{chr(10).join(groups['work'])}
     </ul>
   </section>
 </main>
@@ -402,6 +436,11 @@ def gallery(p, lang):
         out.append('<div class="posters">')
         for s, alt in zip(p["posters"], p["poster_alt"]):
             out.append(f'<figure>{img(s, alt, 900, 1125, zoom=True)}</figure>')
+        out.append("</div>")
+    if "tti" in p:
+        out.append('<div class="posters">')
+        for s, alt in zip(p["tti"], c["alts"]):
+            out.append(f'<figure>{img(s, alt, 900, 1125, zoom=True)}<figcaption>{alt}</figcaption></figure>')
         out.append("</div>")
     if "cards" in p:
         out.append('<div class="cards">')
@@ -431,8 +470,10 @@ def project(lang, i, p):
     path = f"/work/{p['slug']}"
     meta = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in c["meta"])
     body = "".join(f"<p>{t}</p>" for t in c["body"])
+    if c.get("link"):
+        body += f'<p><a class="text-link" href="{c["link"][1]}" target="_blank" rel="noopener">{c["link"][0]} ↗</a></p>'
     return (head(lang, f"{c['title']} · {c['sub']} | {NAME[lang]}", c["summary"], path, p["slug"])
-            + header(lang, "work", path, p.get("dark")) + f"""<main id="main" class="case">
+            + header(lang, p.get("group", "work"), path, p.get("dark")) + f"""<main id="main" class="case">
   <a class="back" href="{pre(lang)}/">{u['all']}</a>
   <header class="case-head">
     <p class="case-kind">{c['kind']}</p>
