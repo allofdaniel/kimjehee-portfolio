@@ -54,6 +54,25 @@
     });
   }
 
+  document.querySelectorAll('[data-steps]').forEach((wrap) => {
+    root.classList.add('js-steps');
+    const bs = [...wrap.querySelectorAll('[role="tab"]')];
+    const pick = (b, focus) => bs.forEach((x) => {
+      const on = x === b;
+      x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+      if (on && focus) x.focus();
+    });
+    pick(bs[0]);
+    bs.forEach((b, i) => {
+      b.addEventListener('click', () => pick(b));
+      b.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        pick(bs[(i + (e.key === 'ArrowRight' ? 1 : bs.length - 1)) % bs.length], true);
+      });
+    });
+  });
+
   const box = document.querySelector('.lightbox');
   if (!box) return;
   const big = box.querySelector('img');

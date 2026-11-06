@@ -91,7 +91,20 @@ ONGO = {
     "slug": "ongo", "year": "2026", "cover": "covers/ongo.webp", "group": "ongo",
     "ko": {"kind": "브랜드 · 진행 중", "title": "온고 溫故", "sub": "한국 민화를 담은 아기담요",
            "summary": "그림으로 소원을 비는 일을, 지금의 방식으로",
-           "meta": [("형태", "직접 운영하는 브랜드"), ("역할", "대표 · 브랜드 기획, 디자인"), ("채널", "@ongo.won_archive"), ("시기", "2026 –")],
+           "meta": [("형태", "직접 운영하는 브랜드"), ("역할", "대표 · 브랜드 기획, 디자인"), ("채널", "@ongo.won_archive"), ("참여", "모두의 창업 2기 · 진행 중"), ("시기", "2026 –")],
+           "program": ("모두의 창업 2기 · 진행 중", "2026년 모두의 창업 2기 1라운드에 진출해 일반·기술 트랙으로 참여하고 있습니다. 멘토기관과 1:1 책임멘토링을 받으며 창업활동을 이어가고 있고, 12월에 2라운드 진출 평가가 예정되어 있습니다."),
+           "steps": [
+               ("브랜드 정의", ["이름은 옛것을 익힌다는 뜻의 온고(溫故)입니다. 한 문장은 \u2018그림으로 소원을 비는 일을, 지금의 방식으로\u2019입니다.",
+                              "모란, 달항아리 같은 한국 민화를 아기담요에 담고, 그림에 담긴 뜻을 적은 이야기 카드를 함께 넣습니다.",
+                              "선물하는 사람으로는 조부모보다 친구와 지인에게 감각 있게 선물하려는 20~30대를 먼저 바라보고 있습니다."], None),
+               ("띠 컬렉션 시안", ["태어난 해의 띠를 아기의 첫 그림으로 담는 컬렉션입니다.",
+                                "2026 병오년은 붉은 해와 푸른 산 사이에 엎드린 아기 말, 2027 정미년은 달항아리 곁의 순한 양, 그리고 두 해를 함께 담은 말과 양 시안을 만들었습니다.",
+                                "시안 이미지는 AI로 만들었으며 실제 제품과 다를 수 있습니다."], ("띠 컬렉션 페이지", "https://ongowon.vercel.app/tti")),
+               ("선물 구매 설문", ["제품을 만들기 전에 사람들이 실제로 아기 선물을 어떻게 고르는지 듣기 위한 2분 설문입니다. 이름은 묻지 않습니다.",
+                                "최근 12개월의 출산·백일·돌 선물 횟수, 가장 최근 선물의 대상과 시기, 품목, 금액, 구매처, 고른 결정적인 이유, 번거롭거나 아쉬웠던 점, 앞으로의 선물 계획을 묻습니다.",
+                                "원하는 사람만 출시 알림을 받을 연락처를 남깁니다."], ("설문 페이지", "https://ongowon.vercel.app/gift")),
+               ("제품 제작", ["담요는 아직 제작 중이며 완성 전입니다."], None),
+           ],
            "body": ["온고(溫故)는 모란, 달항아리 같은 한국 민화를 아기담요에 담는 브랜드입니다. 그림에 담긴 뜻을 적은 이야기 카드를 함께 넣어, 아기의 첫 담요가 옛 그림으로 소원을 비는 일이 되도록 준비하고 있습니다.",
                     "태어난 해의 띠를 첫 그림으로 담는 띠 컬렉션 시안을 만들었고, 제품을 만들기 전에 실제로 아기 선물을 어떻게 고르는지 듣는 2분 설문을 운영하고 있습니다.",
                     "아래 이미지는 AI로 만든 시안이며 실제 제품과 다를 수 있습니다."],
@@ -100,7 +113,20 @@ ONGO = {
            "link": ("온고 브랜드 페이지", "https://ongowon.vercel.app")},
     "en": {"kind": "Brand · in progress", "title": "Ongo 溫故", "sub": "Baby blankets with Korean folk painting",
            "summary": "Wishing through pictures, the way we live now",
-           "meta": [("Type", "My own brand"), ("Role", "Founder · brand planning, design"), ("Channel", "@ongo.won_archive"), ("Year", "2026 –")],
+           "meta": [("Type", "My own brand"), ("Role", "Founder · brand planning, design"), ("Channel", "@ongo.won_archive"), ("Program", "Modoo Startup, 2nd cohort · ongoing"), ("Year", "2026 –")],
+           "program": ("Modoo Startup, 2nd cohort · ongoing", "In 2026 I advanced to round one of the second Modoo Startup cohort, a Korean government startup program, on the general and technology track. I am working through one-on-one mentoring with a mentor institution, and the round-two selection review is scheduled for December."),
+           "steps": [
+               ("Define the brand", ["The name is Ongo (溫故), \u2018warming up the old\u2019. The line is \u2018wishing through pictures, the way we live now\u2019.",
+                                     "Korean folk paintings such as peonies and moon jars go on baby blankets, each with a story card explaining what the painting wishes for.",
+                                     "The first gift-givers I am designing for are people in their twenties and thirties choosing a stylish gift for friends, more than grandparents."], None),
+               ("Zodiac drafts", ["A collection that makes the baby's birth-year animal its first picture.",
+                                  "I drafted a baby horse between a red sun and blue hills for 2026, a gentle lamb beside a moon jar for 2027, and the two together.",
+                                  "The drafts are AI-generated and may differ from the final product."], ("Zodiac collection page", "https://ongowon.vercel.app/tti")),
+               ("Gift survey", ["A two-minute survey, run before production, on how people actually choose baby gifts. It does not ask for names.",
+                                "It asks how many birth, 100-day and first-birthday gifts people gave in the past year, who and what the latest one was for, what they bought, how much they spent, where, why they chose it, what was frustrating, and what gifts are coming up.",
+                                "Respondents can leave contact details for a launch notice if they wish."], ("Survey page", "https://ongowon.vercel.app/gift")),
+               ("Production", ["The blankets are still in production and not yet finished."], None),
+           ],
            "body": ["Ongo (溫故) puts Korean folk painting, such as peonies and moon jars, on baby blankets. Each comes with a story card explaining what the painting wishes for, so a baby's first blanket carries an old way of making a wish.",
                     "I made draft designs for a zodiac collection that uses the baby's birth-year animal as its first picture, and I run a two-minute survey on how people actually choose baby gifts before production.",
                     "The images below are AI-generated drafts and may differ from the final product."],
@@ -461,6 +487,26 @@ def gallery(p, lang):
     return "\n".join(out)
 
 
+def program_block(c):
+    if not c.get("program"):
+        return ""
+    t, d = c["program"]
+    return f'\n  <aside class="program"><p class="program-t"><span class="program-dot"></span>{e(t)}</p><p class="program-d">{e(d)}</p></aside>'
+
+
+def steps_block(c, u):
+    tabs, panels = [], []
+    for i, (t, paras, link) in enumerate(c["steps"]):
+        sel = "true" if i == 0 else "false"
+        tabs.append(f'<button type="button" role="tab" id="st-{i}" aria-controls="sp-{i}" aria-selected="{sel}"><span class="st-n">{i + 1}</span><span class="st-t">{e(t)}</span></button>')
+        body = "".join(f"<p>{e(x)}</p>" for x in paras)
+        if link:
+            body += f'<a class="text-link st-link" href="{link[1]}" target="_blank" rel="noopener">{e(link[0])} ↗</a>'
+        panels.append(f'<div class="st-panel" id="sp-{i}" role="tabpanel" aria-labelledby="st-{i}"><h3>{i + 1}. {e(t)}</h3>{body}</div>')
+    return (f'<div class="steps" data-steps><div class="st-nav" role="tablist" aria-label="{e(u["process"])}" style="--n:{len(tabs)}">{"".join(tabs)}</div>'
+            + "".join(panels) + "</div>")
+
+
 def stats_block(c):
     if not c.get("stats"):
         return ""
@@ -477,7 +523,7 @@ def project(lang, i, p):
     meta = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in c["meta"])
     body = "".join(f"<p>{t}</p>" for t in c["body"])
     if c.get("link"):
-        body += f'<p><a class="text-link" href="{c["link"][1]}" target="_blank" rel="noopener">{c["link"][0]} ↗</a></p>'
+        body += f'<p class="cta-wrap"><a class="cta" href="{c["link"][1]}" target="_blank" rel="noopener">{c["link"][0]}<span aria-hidden="true">↗</span></a></p>'
     return (head(lang, f"{c['title']} · {c['sub']} | {NAME[lang]}", c["summary"], path, p["slug"])
             + header(lang, p.get("group", "work"), path, p.get("dark")) + f"""<main id="main" class="case">
   <a class="back" href="{pre(lang)}/#{p.get('group', 'work')}">{u['all']}</a>
@@ -489,9 +535,9 @@ def project(lang, i, p):
   <div class="case-intro">
     <dl class="meta">{meta}</dl>
     <div class="case-body">{body}</div>
-  </div>
+  </div>{program_block(c)}
   <section class="case-flow" aria-label="{u['process']}">
-    {flow(c['flow'], u['process'])}
+    {steps_block(c, u) if c.get('steps') else flow(c['flow'], u['process'])}
   </section>
 {stats_block(c)}
   <section class="case-gallery" aria-label="{c['title']}">
