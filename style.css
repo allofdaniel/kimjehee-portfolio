@@ -82,10 +82,22 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gut); }
 
 /* project index */
 .index { padding: clamp(48px, 8vw, 110px) 0 clamp(64px, 9vw, 130px); }
-.index { scroll-margin-top: 64px; }
-.index-ongo { padding-bottom: 0; }
+.panel { scroll-margin-top: 80px; }
+.panel + .panel { margin-top: clamp(48px, 7vw, 96px); }
+.switch { display: none; scroll-margin-top: 88px; }
+.js-tabs .switch { display: inline-flex; gap: 4px; padding: 4px; margin-bottom: clamp(20px, 3vw, 32px); border: 1px solid var(--line); border-radius: 999px; max-width: 100%; }
+.js-tabs .panel-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.js-tabs .panel + .panel { margin-top: 0; }
+.js-tabs .panel[hidden] { display: none; }
+.switch button { display: inline-flex; align-items: baseline; gap: 8px; padding: 10px 20px; border: 0; border-radius: 999px; background: none; color: var(--soft); font: inherit; font-size: 16px; cursor: pointer; white-space: nowrap; transition: background .3s, color .3s; }
+.switch button:hover { color: var(--ink); }
+.switch button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.switch button[aria-selected="true"] .g-no, .switch button[aria-selected="true"] .g-count { color: inherit; opacity: .7; }
+.switch button:focus-visible { outline: 2px solid var(--ox); outline-offset: 2px; }
+.g-count { font-size: 13px; color: var(--soft); }
 .index .label { display: flex; align-items: baseline; gap: 10px; font-size: 17px; color: var(--ink); }
 .g-no { font-family: var(--serif); font-size: 15px; color: var(--ox); }
+@media (max-width: 520px) { .switch button { padding: 9px 14px; font-size: 14px; gap: 6px; } .g-count { display: none; } }
 .posters figcaption { margin-top: 10px; font-size: 14px; color: var(--soft); }
 .label { font-size: 15px; font-family: var(--sans); font-weight: 400; color: var(--soft); margin: 0 0 16px; letter-spacing: 0; }
 .rows { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }

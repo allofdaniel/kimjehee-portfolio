@@ -403,17 +403,23 @@ def home(lang):
       <a class="text-link" href="{pre(lang)}/about">{u['more']}</a>
     </div>
   </section>
-  <section class="index index-ongo" id="ongo" aria-labelledby="idx-ongo">
-    <h2 id="idx-ongo" class="label"><span class="g-no">1</span>{u['g_ongo']}</h2>
-    <ul class="rows">
+  <section class="index" aria-label="{u['work']}">
+    <div class="switch" role="tablist" aria-label="{u['work']}">
+      <button type="button" role="tab" id="tab-ongo" aria-controls="ongo" aria-selected="true"><span class="g-no">1</span>{u['g_ongo']}<span class="g-count">{len(groups['ongo'])}</span></button>
+      <button type="button" role="tab" id="tab-work" aria-controls="work" aria-selected="false"><span class="g-no">2</span>{u['g_work']}<span class="g-count">{len(groups['work'])}</span></button>
+    </div>
+    <div class="panel" id="ongo" role="tabpanel" aria-labelledby="tab-ongo">
+      <h2 class="label panel-label">{u['g_ongo']}</h2>
+      <ul class="rows">
 {chr(10).join(groups['ongo'])}
-    </ul>
-  </section>
-  <section class="index" id="work" aria-labelledby="idx">
-    <h2 id="idx" class="label"><span class="g-no">2</span>{u['g_work']}</h2>
-    <ul class="rows">
+      </ul>
+    </div>
+    <div class="panel" id="work" role="tabpanel" aria-labelledby="tab-work">
+      <h2 class="label panel-label">{u['g_work']}</h2>
+      <ul class="rows">
 {chr(10).join(groups['work'])}
-    </ul>
+      </ul>
+    </div>
   </section>
 </main>
 """ + foot(lang))
@@ -474,7 +480,7 @@ def project(lang, i, p):
         body += f'<p><a class="text-link" href="{c["link"][1]}" target="_blank" rel="noopener">{c["link"][0]} ↗</a></p>'
     return (head(lang, f"{c['title']} · {c['sub']} | {NAME[lang]}", c["summary"], path, p["slug"])
             + header(lang, p.get("group", "work"), path, p.get("dark")) + f"""<main id="main" class="case">
-  <a class="back" href="{pre(lang)}/">{u['all']}</a>
+  <a class="back" href="{pre(lang)}/#{p.get('group', 'work')}">{u['all']}</a>
   <header class="case-head">
     <p class="case-kind">{c['kind']}</p>
     <h1>{c['title']}<span>{c['sub']}</span></h1>
