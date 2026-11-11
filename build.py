@@ -50,6 +50,24 @@ COMMERCE = {
     "gallery": [("wide", "commerce/00.webp", 2000, 1125), ("wide", "commerce/01.webp", 2000, 1125), ("half", "commerce/02.webp", 2000, 1125), ("half", "commerce/03.webp", 2000, 1125), ("wide", "commerce/04.webp", 2000, 1125), ("wide", "commerce/05.webp", 2000, 1125)],
     "phones": [("petfood/02-first.webp", 660, 2576), ("petfood/03-why.webp", 747, 7681), ("petfood/04-faq.webp", 524, 2576), ("petfood/05-review.webp", 384, 2576)],
 }
+HEALTHCARE = {
+    "slug": "healthcare", "year": "2024", "cover": "covers/healthcare.webp",
+    "ko": {"kind": "헬스케어 서비스 기획", "title": "초등학생 체형 검사 서비스", "sub": "자세 분석 장비 학교용 개선",
+           "summary": "체형 분석 장비를 한 반씩 이어서 검사하는 학교용 서비스로",
+           "meta": [("회사", "헬스케어·로봇 기술 기업"), ("역할", "서비스 기획, 기능명세, 화면 설계 (단독)"), ("시기", "2024")],
+           "body": ["관절을 자동으로 인식해 체형을 분석하는 검사 장비를 초등학교용으로 바꾸는 프로젝트를 혼자 맡았습니다. 학생 한 반을 이어서 검사하고, 긴 결과지를 한두 장으로 줄이고, 이후 관리는 학생별 카카오톡으로 전달하는 것이 목표였습니다.",
+                    "사업팀의 요구사항을 우선순위로 나누고 IA로 업무 규모와 개발 공수를 파악한 뒤, 검사 프로그램과 관리자 웹의 화면 설계와 기능명세를 작성해 디자인·개발·테스트까지 함께했습니다."],
+           "flow": ["요구사항 우선순위", "IA·공수 산정", "검사 프로그램 설계", "관리자 웹 설계"],
+           "caps": ["검사 프로그램. 자세별 순서 안내, 음성 안내, 자동·수동 연속 검사", "학교 목록. 지부별 로그인과 카드형 학교 목록", "관리자 웹. 학교·회원 수와 결과 미발송 학생을 한눈에", "기능정의. 검사 프로그램과 관리자 웹의 대표 기능", "사업팀 요구사항을 우선순위로 정리", "IA로 화면 유형과 개발 공수 파악"]},
+    "en": {"kind": "Healthcare service planning", "title": "School Posture Screening", "sub": "Adapting a body-analysis device for schools",
+           "summary": "Turning a body-analysis device into a class-by-class screening service for schools",
+           "meta": [("Company", "Healthcare & robotics company"), ("Role", "Service planning, specs, screen design (solo)"), ("Year", "2024")],
+           "body": ["I led, on my own, the adaptation of a joint-tracking posture analysis device for elementary schools. The goals: screen a whole class in one continuous session, cut a long report down to one or two pages, and send each student's follow-up care via KakaoTalk.",
+                    "I sorted the business team's requests by priority, sized the work and development effort with an IA, then wrote the screen designs and functional specs for both the screening program and the admin web, staying with the project through design, development and testing."],
+           "flow": ["Prioritized requirements", "IA & effort sizing", "Screening program", "Admin web"],
+           "caps": ["Screening program: pose-by-pose guide, voice prompts, auto and manual continuous screening", "School list: regional logins and a card-style list", "Admin web: schools, students and unsent results at a glance", "Feature definition for the screening program and admin web", "Business requirements sorted by priority", "IA used to size screen types and development effort"]},
+    "gallery": [("wide", "healthcare/00.webp", 2000, 1125), ("half", "healthcare/01.webp", 2000, 1125), ("half", "healthcare/02.webp", 2000, 1125), ("wide", "healthcare/03.webp", 2000, 1125), ("half", "healthcare/04.webp", 2000, 1125), ("half", "healthcare/05.webp", 2000, 1125)],
+}
 ESG = {
     "slug": "zero-waste", "year": "2023", "cover": "covers/esg.webp", "dark": True,
     "ko": {"kind": "UX 연구 · 석사 논문", "title": "제로웨이스트 행동유도", "sub": "게이미피케이션 서비스 제안",
@@ -156,7 +174,7 @@ UI = {
 }
 NAME = {"ko": "김제희", "en": "Jehee Kim"}
 
-PROJECTS = [FINANCE, COMMERCE,
+PROJECTS = [FINANCE, COMMERCE, HEALTHCARE,
 
     {
         "slug": "quality-system", "year": "2025", "cover": "covers/quality-system.webp",
@@ -165,28 +183,35 @@ PROJECTS = [FINANCE, COMMERCE,
                "meta": [("고객", "자동차 부품 제조사"), ("역할", "서비스 기획, 화면 설계"), ("시기", "2025")],
                "body": ["자동차 부품 제조사의 품질 데이터베이스 중 신뢰성 시험 영역을 맡았습니다. 엑셀 일정표와 종이 성적서로 흩어져 있던 시험 과정을 세 흐름으로 묶고, 화면마다 AS-IS와 TO-BE를 나란히 설계해 실무진 검토를 받았습니다."],
                "flow": ["일정 파악·예약", "실시간 데이터 확인", "결과 확인·자동 보고서"],
-               "caps": ["대시보드. 오늘의 시험 현황과 챔버별 예약 가능 여부", "엑셀 일정표를 간트형 일정 화면으로", "시험 데이터 실시간 모니터링"]},
+               "caps": ["세 흐름으로 묶은 핵심 기능", "대시보드. 오늘의 시험 현황과 챔버별 예약 가능 여부", "엑셀 일정표를 간트형 일정 화면으로", "월간 일정. 챔버별 예약 현황을 달력으로", "예약. 빈 시간을 골라 시험 정보 입력", "엑셀 데이터를 실시간 그래프로", "기간·시간별 데이터 확인과 경고 히스토리", "종이 성적서를 자동 보고서로", "종합 평가. 통과와 반려를 한눈에"]},
         "en": {"kind": "Service planning", "title": "Manufacturing Quality System", "sub": "Reliability test management",
                "summary": "Bringing scattered spreadsheets and paper reports into one flow",
                "meta": [("Client", "Automotive parts maker"), ("Role", "Service planning, screen design"), ("Year", "2025")],
                "body": ["I took on the reliability-testing module of an automotive parts maker's quality database. Test work was scattered across Excel schedules and paper reports, so I organized it into three flows and designed each screen as a side-by-side AS-IS and TO-BE for review with the client's engineers."],
                "flow": ["Check & book schedules", "Monitor live data", "Results & auto reports"],
-               "caps": ["Dashboard showing today's tests and chamber availability", "From an Excel schedule to a Gantt-style planner", "Live monitoring of test data"]},
-        "gallery": [("wide", "qms/00.webp", 2000, 1125), ("half", "qms/01.webp", 2000, 1125), ("half", "qms/03.webp", 2000, 1125)],
+               "caps": ["Core features grouped into three flows", "Dashboard showing today's tests and chamber availability", "From an Excel schedule to a Gantt-style planner", "Monthly calendar of chamber bookings", "Booking: pick a free slot and enter test details", "From Excel data to live graphs", "Data by period and time, with a warning history", "From paper reports to automatic reports", "Final review: pass or reject at a glance"]},
+        "gallery": [("wide", "qms/04.webp", 2000, 1125), ("wide", "qms/00.webp", 2000, 1125), ("half", "qms/01.webp", 2000, 1125), ("half", "qms/05.webp", 2000, 1125), ("half", "qms/06.webp", 2000, 1125), ("half", "qms/03.webp", 2000, 1125), ("half", "qms/07.webp", 2000, 1125), ("half", "qms/08.webp", 2000, 1125), ("wide", "qms/09.webp", 2000, 1125)],
     },
     {
         "slug": "vip-concierge", "year": "2025", "cover": "covers/vip-concierge.webp", "dark": True,
         "ko": {"kind": "광고 콘텐츠", "title": "VIP 컨시어지 서비스", "sub": "해외 광고 콘텐츠",
                "summary": "고객마다 다른 상황을 한 문장의 광고로",
                "meta": [("형태", "개인 외주"), ("역할", "콘텐츠·웹 기획, 디자인"), ("도구", "Figma, Canva"), ("시기", "2025.08")],
-               "body": ["한국에 머무는 해외 임원의 비서·의전·메디컬 일정을 돕는 서비스입니다. 세부 서비스마다 다른 고객의 상황을 한 문장으로 정리해 메타 광고 소재로 만들고, 서비스 소개 웹페이지 구성까지 맡았습니다."],
-               "flow": ["고객 상황 정의", "한 문장 메시지", "메타 광고 소재"]},
+               "body": ["한국에 머무는 해외 임원의 비서·의전·메디컬 일정을 돕는 서비스입니다. 세부 서비스마다 다른 고객의 상황을 한 문장으로 정리해 메타 광고 소재로 만들고, 서비스 소개 웹페이지 구성까지 맡았습니다.",
+                        "2주간 집행해 4.4만 명에게 도달하고 잠재고객 60여 명을 확보했습니다. 국가·연령·소재별 반응을 나눠 보고, 신뢰를 주는 키워드와 서비스가 분명히 보이는 이미지가 효과적이라는 점을 다음 집행 전략으로 정리했습니다."],
+               "flow": ["고객 상황 정의", "한 문장 메시지", "메타 광고 소재", "성과 분석·개선"],
+               "stats": [("4.4만", "도달"), ("4.5만", "노출"), ("60+", "잠재고객 확보")],
+               "caps2": ["8월 운영 결과. 25–34세 남성이 리드의 83%", "소재별 반응. K-뷰티와 VIP 의전 소재가 높은 반응", "Top 1 소재의 국가·연령별 성과", "국가별 잠재고객 분석", "뷰티 소재의 결과, 인사이트, 다음 솔루션", "의전 소재의 결과, 인사이트, 다음 솔루션"]},
         "en": {"kind": "Ad content", "title": "VIP Concierge Service", "sub": "Overseas ad content",
                "summary": "Turning each client's situation into a one-line ad",
                "meta": [("Type", "Freelance"), ("Role", "Content & web planning, design"), ("Tools", "Figma, Canva"), ("Year", "2025.08")],
-               "body": ["A service that handles secretarial, protocol and medical schedules for foreign executives staying in Korea. I distilled each service's client situation into one line for Meta ad creatives and planned the structure of the service web page."],
-               "flow": ["Define the situation", "One-line message", "Meta ad creative"]},
+               "body": ["A service that handles secretarial, protocol and medical schedules for foreign executives staying in Korea. I distilled each service's client situation into one line for Meta ad creatives and planned the structure of the service web page.",
+                        "Over two weeks the ads reached 44,000 people and brought in 60+ leads. I broke results down by country, age and creative, and turned the findings, that trust-building keywords and images that make the service obvious perform best, into the plan for the next run."],
+               "flow": ["Define the situation", "One-line message", "Meta ad creative", "Analyze & improve"],
+               "stats": [("44K", "reach"), ("45K", "impressions"), ("60+", "leads")],
+               "caps2": ["August results: men aged 25–34 made up 83% of leads", "Response by creative: K-beauty and VIP protocol led", "Top creative by country and age", "Leads by country", "Beauty creatives: results, insight, next steps", "Protocol creatives: results, insight, next steps"]},
         "posters": ["concierge/03.webp", "concierge/01.webp", "concierge/04.webp", "concierge/00.webp", "concierge/02.webp", "concierge/05.webp"],
+        "gallery2": [("wide", "concierge/07.webp", 2000, 1125), ("wide", "concierge/09.webp", 2000, 1125), ("half", "concierge/10.webp", 2000, 1125), ("half", "concierge/08.webp", 2000, 1125), ("half", "concierge/11.webp", 2000, 1125), ("half", "concierge/12.webp", 2000, 1125)],
         "poster_alt": ["Land on Monday, perform by Tuesday", "Settle the circle, free the leader", "K-Art Medicine", "Invest in your time", "Your bespoke K-medical concierge", "K-beauty, sealed for VIPs"],
     },
     {
@@ -196,13 +221,16 @@ PROJECTS = [FINANCE, COMMERCE,
                "meta": [("회사", "온라인 교육 기업"), ("역할", "마케팅 어시스턴트"), ("도구", "Figma, Meta·Google Ads"), ("시기", "2022.08 – 2023.01")],
                "body": ["디자인 교육 브랜드의 인스타그램 카드뉴스와 강의 홍보 블로그를 기획했습니다. 강의 내용을 요약하고 중고거래·지도 서비스의 이용 흐름을 비교하는 사례 분석으로 엮어, 마지막 장까지 넘겨보게 만드는 구성을 연습했습니다."],
                "flow": ["강의 요약", "서비스 사례 분석", "카드뉴스·블로그 발행"],
-               "alts": ["개인화 서비스는 어떻게 만드나요", "본인의 이야기를 주고 싶은 디자이너", "다른 중고거래 서비스와 비교하기", "중고거래 서비스를 선호하는 이유", "지도 서비스가 가장 잘할 수 있는 것", "지도 서비스 이용 흐름 분석"]},
+               "alts": ["개인화 서비스는 어떻게 만드나요", "본인의 이야기를 주고 싶은 디자이너", "다른 중고거래 서비스와 비교하기", "중고거래 서비스를 선호하는 이유", "지도 서비스가 가장 잘할 수 있는 것", "지도 서비스 이용 흐름 분석"],
+               "caps2": ["카드뉴스와 블로그 콘텐츠 전체"]},
         "en": {"kind": "Social content", "title": "Design Education Brand", "sub": "Social & blog content",
                "summary": "Card news people swipe through to the end",
                "meta": [("Company", "Online education company"), ("Role", "Marketing assistant"), ("Tools", "Figma, Meta & Google Ads"), ("Year", "2022.08 – 2023.01")],
                "body": ["I planned Instagram card news and course-promotion blog posts for a design education brand, summarizing lectures and weaving in case studies that compare user flows of second-hand marketplaces and map apps, so readers keep swiping to the last card."],
                "flow": ["Summarize the course", "Analyze service cases", "Publish cards & posts"],
-               "alts": ["How personalized services are made", "A designer you would like to introduce", "Comparing second-hand marketplaces", "Why users prefer one marketplace", "What a map app does best", "Map app user flow analysis"]},
+               "alts": ["How personalized services are made", "A designer you would like to introduce", "Comparing second-hand marketplaces", "Why users prefer one marketplace", "What a map app does best", "Map app user flow analysis"],
+               "caps2": ["Card news and blog content at a glance"]},
+        "gallery2": [("wide", "edu/20.webp", 2000, 1125)],
         "cards": ["edu/00.webp", "edu/01.webp", "edu/04.webp", "edu/05.webp", "edu/08.webp", "edu/09.webp"],
     },
     {
@@ -212,17 +240,20 @@ PROJECTS = [FINANCE, COMMERCE,
                "meta": [("형태", "대학원 재학 중 외주"), ("역할", "브랜딩·패키지 디자인"), ("도구", "Illustrator, Photoshop"), ("시기", "2020.09 – 2020.12")],
                "body": ["가치를 기준으로 소비하는 여성을 위한 의류 브랜드의 런칭에 참여했습니다. 행택, 봉투, 쇼핑백, 포장지, 테이프, 실링 스티커가 같은 목소리를 내도록 디자인하고 재질과 인쇄 방식을 직접 비교해 골랐습니다."],
                "flow": ["브랜드 무드", "적용 품목 설계", "재질·인쇄 선정"],
-               "alts": ["브랜드 행택", "브랜드 화보", "패턴 포장지와 실링 스티커", "실링 왁스로 봉한 포장", "브랜드 문구가 인쇄된 포장 테이프", "브로슈어와 화보 카드"]},
+               "alts": ["브랜드 행택", "브랜드 화보", "패턴 포장지와 실링 스티커", "실링 왁스로 봉한 포장", "브랜드 문구가 인쇄된 포장 테이프", "브로슈어와 화보 카드"],
+               "caps2": ["행택부터 포장 테이프까지 적용 품목 전체"]},
         "en": {"kind": "Brand packaging", "title": "Women's Fashion Brand", "sub": "Launch packaging",
                "summary": "One voice from hang tag to seal sticker",
                "meta": [("Type", "Freelance during grad school"), ("Role", "Branding & packaging design"), ("Tools", "Illustrator, Photoshop"), ("Year", "2020.09 – 2020.12")],
                "body": ["I joined the launch of a clothing brand for women who shop by their values, designing hang tags, envelopes, bags, wrapping paper, tape and seal stickers to speak with one voice, and comparing materials and print methods myself."],
                "flow": ["Brand mood", "Item design", "Materials & print"],
-               "alts": ["Hang tag", "Brand photography", "Patterned wrap and seal sticker", "Wax-sealed package", "Printed packing tape", "Brochure and photo card"]},
+               "alts": ["Hang tag", "Brand photography", "Patterned wrap and seal sticker", "Wax-sealed package", "Printed packing tape", "Brochure and photo card"],
+               "caps2": ["Every item, from hang tag to packing tape"]},
+        "gallery2": [("wide", "fashion/20.webp", 2000, 1125)],
         "mosaic": [("a", "fashion/05.webp"), ("b", "fashion/03.webp"), ("c", "fashion/11.webp"), ("d", "fashion/10.webp"), ("e", "fashion/13.webp"), ("f", "fashion/09.webp")],
     },
 ]
-PROJECTS[3:3] = [ESG, ROUTINE]
+PROJECTS[4:4] = [ESG, ROUTINE]
 PROJECTS.insert(0, ONGO)
 
 EMAIL = "kjh012677@gmail.com"
@@ -483,6 +514,11 @@ def gallery(p, lang):
         out.append('<div class="mosaic">')
         for (k, s), alt in zip(p["mosaic"], c["alts"]):
             out.append(f'<figure class="mo-{k}">{img(s, alt, zoom=True)}</figure>')
+        out.append("</div>")
+    if "gallery2" in p:
+        out.append('<div class="g-shots">')
+        for (kind, s, w, h), cap in zip(p["gallery2"], c["caps2"]):
+            out.append(f'<figure class="g-{kind}">{img(s, cap, w, h, zoom=True)}<figcaption>{cap}</figcaption></figure>')
         out.append("</div>")
     return "\n".join(out)
 
