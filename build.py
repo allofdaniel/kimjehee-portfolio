@@ -162,7 +162,7 @@ UI = {
            "close": "닫기", "zoom": "이미지 크게 보기", "process": "진행 흐름",
            "site": "김제희 포트폴리오", "home_title": "김제희 · 서비스·마케팅 디자이너",
            "home_desc": "온고 브랜드를 운영하는 서비스·마케팅 디자이너 김제희의 포트폴리오입니다.",
-           "g_ongo": "온고 브랜드", "g_work": "서비스·마케팅 디자인", "nav_ongo": "온고"},
+           "g_ongo": "온고 브랜드", "g_work": "UX", "g_cx": "CX", "nav_ongo": "온고"},
     "en": {"work": "Work", "about": "About", "skip": "Skip to content", "all": "All work", "next": "Next project",
            "role": "Service & Marketing Designer", "theme": "Toggle color mode", "other": "한국어", "other_label": "한국어",
            "lede": "I solve customer problems through screens and messages. I have designed services in finance, healthcare, subscription commerce and manufacturing, and I am now building Ongo, a baby blanket brand rooted in Korean folk painting.",
@@ -170,7 +170,7 @@ UI = {
            "close": "Close", "zoom": "Enlarged image", "process": "Process",
            "site": "Jehee Kim Portfolio", "home_title": "Jehee Kim · Service & Marketing Designer",
            "home_desc": "Portfolio of Jehee Kim, a service and marketing designer building the Ongo brand.",
-           "g_ongo": "Ongo brand", "g_work": "Service & marketing design", "nav_ongo": "Ongo"},
+           "g_ongo": "Ongo brand", "g_work": "UX", "g_cx": "CX", "nav_ongo": "Ongo"},
 }
 NAME = {"ko": "김제희", "en": "Jehee Kim"}
 
@@ -255,8 +255,13 @@ PROJECTS = [FINANCE, COMMERCE, HEALTHCARE,
 ]
 PROJECTS[4:4] = [ESG, ROUTINE]
 # newest first (by start date); ties within a year ordered by month
-_ORDER = ["vip-concierge", "quality-system", "healthcare", "zero-waste", "solo-routine",
-          "design-education", "pet-food", "fashion-brand", "insurance-ux"]
+_ORDER = ["quality-system", "healthcare", "zero-waste", "solo-routine", "pet-food", "insurance-ux",
+          "vip-concierge", "design-education", "fashion-brand"]
+# customer-experience (marketing/content) work gets its own tab; everything else is UX
+CX = {"vip-concierge", "design-education", "fashion-brand"}
+for _p in PROJECTS:
+    if _p["slug"] in CX:
+        _p["group"] = "cx"
 PROJECTS.sort(key=lambda p: _ORDER.index(p["slug"]))
 PROJECTS.insert(0, ONGO)
 
@@ -442,7 +447,7 @@ def flow(steps, label):
 # ---------------------------------------------------------------- pages
 def home(lang):
     u = UI[lang]
-    groups = {"ongo": [], "work": []}
+    groups = {"ongo": [], "work": [], "cx": []}
     for p in PROJECTS:
         c = p[lang]
         rows = groups[p.get("group", "work")]
@@ -454,6 +459,16 @@ def home(lang):
         <span class="row-img">{img(p['cover'], '', 1800, 900, vt='cover-' + p['slug'])}</span>
       </a>
     </li>""")
+    keys = [("ongo", u["g_ongo"]), ("work", u["g_work"]), ("cx", u["g_cx"])]
+    tabs = "\n".join(
+        f'      <button type="button" role="tab" id="tab-{k}" aria-controls="{k}" aria-selected="{"true" if n == 0 else "false"}"><span class="g-no">{n + 1}</span>{label}<span class="g-count">{len(groups[k])}</span></button>'
+        for n, (k, label) in enumerate(keys))
+    panels = "\n".join(f"""    <div class="panel" id="{k}" role="tabpanel" aria-labelledby="tab-{k}">
+      <h2 class="label panel-label">{label}</h2>
+      <ul class="rows">
+{chr(10).join(groups[k])}
+      </ul>
+    </div>""" for k, label in keys)
     name = "".join(f"<span>{ch}</span>" for ch in (NAME[lang] if lang == "ko" else "Jehee Kim".split(" ")))
     return (head(lang, u["home_title"], u["home_desc"], "/", "home") + header(lang, "", "/") + f"""<main id="main">
   <section class="hero">
@@ -466,21 +481,9 @@ def home(lang):
   </section>
   <section class="index" aria-label="{u['work']}">
     <div class="switch" role="tablist" aria-label="{u['work']}">
-      <button type="button" role="tab" id="tab-ongo" aria-controls="ongo" aria-selected="true"><span class="g-no">1</span>{u['g_ongo']}<span class="g-count">{len(groups['ongo'])}</span></button>
-      <button type="button" role="tab" id="tab-work" aria-controls="work" aria-selected="false"><span class="g-no">2</span>{u['g_work']}<span class="g-count">{len(groups['work'])}</span></button>
+{tabs}
     </div>
-    <div class="panel" id="ongo" role="tabpanel" aria-labelledby="tab-ongo">
-      <h2 class="label panel-label">{u['g_ongo']}</h2>
-      <ul class="rows">
-{chr(10).join(groups['ongo'])}
-      </ul>
-    </div>
-    <div class="panel" id="work" role="tabpanel" aria-labelledby="tab-work">
-      <h2 class="label panel-label">{u['g_work']}</h2>
-      <ul class="rows">
-{chr(10).join(groups['work'])}
-      </ul>
-    </div>
+{panels}
   </section>
 </main>
 """ + foot(lang))
@@ -565,7 +568,7 @@ def project(lang, i, p):
     if c.get("link"):
         body += f'<p class="cta-wrap"><a class="cta" href="{c["link"][1]}" target="_blank" rel="noopener">{c["link"][0]}<span aria-hidden="true">↗</span></a></p>'
     return (head(lang, f"{c['title']} · {c['sub']} | {NAME[lang]}", c["summary"], path, p["slug"])
-            + header(lang, p.get("group", "work"), path, p.get("dark")) + f"""<main id="main" class="case">
+            + header(lang, "ongo" if p.get("group") == "ongo" else "work", path, p.get("dark")) + f"""<main id="main" class="case">
   <a class="back" href="{pre(lang)}/#{p.get('group', 'work')}">{u['all']}</a>
   <header class="case-head">
     <p class="case-kind">{c['kind']}</p>
