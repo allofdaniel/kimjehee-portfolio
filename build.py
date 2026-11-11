@@ -254,6 +254,10 @@ PROJECTS = [FINANCE, COMMERCE, HEALTHCARE,
     },
 ]
 PROJECTS[4:4] = [ESG, ROUTINE]
+# newest first (by start date); ties within a year ordered by month
+_ORDER = ["vip-concierge", "quality-system", "healthcare", "zero-waste", "solo-routine",
+          "design-education", "pet-food", "fashion-brand", "insurance-ux"]
+PROJECTS.sort(key=lambda p: _ORDER.index(p["slug"]))
 PROJECTS.insert(0, ONGO)
 
 EMAIL = "kjh012677@gmail.com"
